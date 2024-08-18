@@ -24,9 +24,11 @@ The intent is to use this as base repository to create production resources.
     `terraform apply`
 
 ## Architecture
-![Architecture](<architecture/prod.png>)
+![Architecture](architecture/prod.jpg)
 
 ## To Do List
-1. Update Readme
+1. Update Readme. 
 
 ## Notes
+
+[def]: <architecture/prod.jpeg>
