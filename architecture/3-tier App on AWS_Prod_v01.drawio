@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net" modified="2024-06-22T18:33:32.699Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:127.0) Gecko/20100101 Firefox/127.0" etag="gcKTtX7Ua4eTsGbkoxGt" version="24.5.5" type="device">
+  <diagram name="Page-1" id="rWpP9lMouUpjrmH_Yf-k">
+    <mxGraphModel dx="1650" dy="647" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-2" value="Amazon Route 53" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#ffffff;fillColor=#232F3E;dashed=0;verticalLabelPosition=middle;verticalAlign=bottom;align=center;html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;spacing=3;shape=mxgraph.aws4.productIcon;prIcon=mxgraph.aws4.route_53;" vertex="1" parent="1">
+          <mxGeometry x="110" y="40" width="80" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-9" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="bLtOPr8B5QaV4x_HBa-O-3" target="bLtOPr8B5QaV4x_HBa-O-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="55" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-10" value="&lt;div&gt;1st Request to Route53&amp;nbsp;&lt;/div&gt;&lt;div&gt;to get DNS&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="bLtOPr8B5QaV4x_HBa-O-9">
+          <mxGeometry x="-0.3093" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-3" value="User" style="shape=actor;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="359" width="60" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-32" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="bLtOPr8B5QaV4x_HBa-O-11" target="bLtOPr8B5QaV4x_HBa-O-31">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-11" value="Application Load Balancer" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.application_load_balancer;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="200" y="376" width="69" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-12" value="AWS WAF" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/networking/Web_Application_Firewall_Policies_WAF.svg;" vertex="1" parent="1">
+          <mxGeometry x="122" y="291" width="68" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-13" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="bLtOPr8B5QaV4x_HBa-O-3" target="bLtOPr8B5QaV4x_HBa-O-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-19" value="ap-south-1a (Subnet 001)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;dashPattern=12 12;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="340" y="122" width="580" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-14" value="MIM Backend" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="540" y="180" width="76.5" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-15" value="AD-Frontend" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="390" y="180" width="76.5" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-21" value="AD-ASG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;arcSize=12;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="368.25" y="140" width="120" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-17" value="RDS MySQL (MultiAZ?)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="680" y="186.5" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-22" value="MIM-ASG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;arcSize=12;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="518.25" y="142" width="120" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-20" value="DynamoDB MultiAZ?" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="800" y="186.5" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-23" value="ap-south-1b (Subnet 002)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;dashed=1;dashPattern=12 12;verticalAlign=bottom;" vertex="1" parent="1">
+          <mxGeometry x="341" y="367" width="580" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-24" value="RDS MySQL (MultiAZ?)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="681" y="431.5" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-25" value="DynamoDB MultiAZ?" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="801" y="431.5" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-26" value="AD-ASG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;arcSize=12;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="369.25" y="385" width="120" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-27" value="MIM-ASG" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;arcSize=12;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="511" y="381.5" width="120" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-28" value="MIM Backend" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="540" y="425" width="76.5" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-29" value="AD Front end" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="390" y="425" width="76.5" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-30" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="bLtOPr8B5QaV4x_HBa-O-29" target="bLtOPr8B5QaV4x_HBa-O-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-31" value="VPC - MTP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#b85450;verticalAlign=bottom;fontSize=24;" vertex="1" parent="1">
+          <mxGeometry x="310" y="65" width="630" height="695" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-33" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;To Do List&lt;/h1&gt;&lt;p&gt;- Add VPC in another region and replicate architecture&lt;br&gt;&lt;/p&gt;&lt;p&gt;- Do we need to LB for different region&lt;br&gt;&lt;/p&gt;&lt;p&gt;- Add Prometheus/Grafana&lt;/p&gt;&lt;p&gt;- Add ElasticSearch, Redis Clusters&lt;/p&gt;&lt;p&gt;- How would Kafka fit in here? Would we use AWS Queue&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="550" width="180" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="bLtOPr8B5QaV4x_HBa-O-34" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Terraform Notes&lt;br&gt;&lt;/h1&gt;&lt;p&gt;- Script should be module to create Dev/QA/Prod Environments&lt;/p&gt;&lt;p&gt;- Use Variables, AWS System and Secret Manager&lt;/p&gt;&lt;p&gt;- Install Web Servers with sample page with should be up and running after EC2 Starts. &lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="290" y="820" width="180" height="250" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
