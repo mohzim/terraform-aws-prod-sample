@@ -54,8 +54,8 @@ resource "aws_lb" "myalb" {
   load_balancer_type = "application"
 
   security_groups = [aws_security_group.webSg.id]
-  # subnets         = [aws_subnet.in-public-sub1.id, aws_subnet.in-private-sub1.id]
-  subnets         = [aws_subnet.in-public-sub1.id]
+  subnets         = [aws_subnet.in-public-sub1.id, aws_subnet.in-private-sub1.id]
+  # subnets         = [aws_subnet.in-public-sub1.id]
 
 
   tags = {
