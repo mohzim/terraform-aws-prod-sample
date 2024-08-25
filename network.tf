@@ -50,8 +50,8 @@ resource "aws_vpc" "sg-vpc" {
 
 resource "aws_subnet" "sg-public-sub1" {
   vpc_id                  = aws_vpc.sg-vpc.id
-  cidr_block              = data.aws_ssm_parameter.region-2-subnet-2-cidr.value
-  availability_zone       = data.aws_ssm_parameter.region-2-subnet-2.value
+  cidr_block              = data.aws_ssm_parameter.region-2-subnet-1-cidr.value
+  availability_zone       = data.aws_ssm_parameter.region-2-subnet-1.value
   map_public_ip_on_launch = true
   provider = aws.sgp
 }
@@ -84,9 +84,11 @@ resource "aws_route_table" "sg-rt" {
 resource "aws_route_table_association" "rta3" {
   subnet_id      = aws_subnet.sg-public-sub1.id
   route_table_id = aws_route_table.sg-rt.id
+  provider = aws.sgp
 }
 
 resource "aws_route_table_association" "rta4" {
   subnet_id      = aws_subnet.sg-private-sub1.id
   route_table_id = aws_route_table.sg-rt.id
+  provider = aws.sgp
 }
