@@ -15,7 +15,8 @@ resource "aws_subnet" "in-public-sub1" {
 resource "aws_subnet" "in-private-sub1" {
   vpc_id                  = aws_vpc.in-vpc.id
   cidr_block              = data.aws_ssm_parameter.region-1-subnet-2-cidr.value
-  availability_zone       = data.aws_ssm_parameter.region-1-subnet-1.value
+  # availability_zone       = data.aws_ssm_parameter.region-1-subnet-1.value
+  availability_zone       = data.aws_ssm_parameter.region-1-subnet-2.value
   map_public_ip_on_launch = false
 }
 
