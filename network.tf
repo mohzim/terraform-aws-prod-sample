@@ -1,6 +1,8 @@
 # Create VPC, Subnet, IG, Route Table, Route Table Association for Region India-Mumbai
 resource "aws_vpc" "in-vpc" {
   cidr_block = data.aws_ssm_parameter.region-1-cidr.value
+  provider = aws.ind
+
 }
 
 resource "aws_subnet" "in-public-sub1" {
@@ -43,6 +45,7 @@ resource "aws_route_table_association" "rta2" {
 # Create VPC, Subnet, IG, Route Table, Route Table Association for Region Singapore
 resource "aws_vpc" "sg-vpc" {
   cidr_block = data.aws_ssm_parameter.region-2-cidr.value
+  provider = aws.sgp
 }
 
 resource "aws_subnet" "sg-public-sub1" {
@@ -50,6 +53,7 @@ resource "aws_subnet" "sg-public-sub1" {
   cidr_block              = data.aws_ssm_parameter.region-2-subnet-2-cidr.value
   availability_zone       = data.aws_ssm_parameter.region-2-subnet-2.value
   map_public_ip_on_launch = true
+  provider = aws.sgp
 }
 
 resource "aws_subnet" "sg-private-sub1" {
@@ -58,14 +62,18 @@ resource "aws_subnet" "sg-private-sub1" {
   cidr_block              = data.aws_ssm_parameter.region-2-subnet-2-cidr.value
   availability_zone       = data.aws_ssm_parameter.region-2-subnet-2.value
   map_public_ip_on_launch = false
+  provider = aws.sgp
 }
 
 resource "aws_internet_gateway" "sg-igw" {
   vpc_id = aws_vpc.sg-vpc.id
+  provider = aws.sgp
 }
 
 resource "aws_route_table" "sg-rt" {
   vpc_id = aws_vpc.sg-vpc.id
+  provider = aws.sgp
+
 
   route {
     cidr_block = "0.0.0.0/0"
