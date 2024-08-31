@@ -48,37 +48,6 @@ data "aws_ssm_parameter" "region-1-subnet-2-cidr" {
   name = "/terraform/cx/region-1/subnet-2/cidr" 
 }
 
-
-# Get Region 2 Value from AWS System Manager Parameter Store
-data "aws_ssm_parameter" "region-2" {
-  name = "/terraform/cx/region-2" 
-}
-
-# Get Region 2 CIDR Value from AWS System Manager Parameter Store
-data "aws_ssm_parameter" "region-2-cidr" {
-  name = "/terraform/cx/region-2/cidr" 
-}
-
-# Get Subnet 1 Value from AWS System Manager Parameter Store
-data "aws_ssm_parameter" "region-2-subnet-1" {
-  name = "/terraform/cx/region-2/subnet-1" 
-}
-
-# Get Subnet 1 CIDR Value from AWS System Manager Parameter Store
-data "aws_ssm_parameter" "region-2-subnet-1-cidr" {
-  name = "/terraform/cx/region-2/subnet-1/cidr" 
-}
-
-# Get Subnet 2 Value from AWS System Manager Parameter Store
-data "aws_ssm_parameter" "region-2-subnet-2" {
-  name = "/terraform/cx/region-2/subnet-2" 
-}
-
-# Get Subnet 2 CIDR Value from AWS System Manager Parameter Store
-data "aws_ssm_parameter" "region-2-subnet-2-cidr" {
-  name = "/terraform/cx/region-2/subnet-2/cidr" 
-}
-
 # Get S3 Bucket Name from AWS System Manager Parameter Store
 data "aws_ssm_parameter" "s3" {
   name = "/terraform/cx/s3" 
