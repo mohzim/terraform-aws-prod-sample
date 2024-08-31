@@ -27,9 +27,9 @@ The intent is to use this as base repository to create production resources.
 ![Architecture](architecture/prod.jpg)
 
 ## To Do List
-1. Update Readme. 
-2. In each region create 1 vpc, and 4 subnets - a pair of Public and Private subnet in 2 AZs. Create EC2 in each subnet i.e. total 4. 
-4. Convert into module and add region while calling from main terraform script. (Link: https://www.simplethread.com/building-a-multi-region-aws-environment-with-terraform/)
+1. Update backend to get values from AWS Parameter store. 
+2. Update Readme. 
+3. In each region create 1 vpc, and 4 subnets - a pair of Public and Private subnet in 2 AZs. Create EC2 in each subnet i.e. total 4. 
 
 ## Notes
 
